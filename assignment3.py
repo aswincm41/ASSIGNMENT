@@ -40,6 +40,50 @@
 # for power in powers_of_2:
 #     print(power)
 
+#qs5
+
+
+# def bubble_sort(arr):
+#     n = len(arr)
+
+#     for i in range(n - 1):
+#         for j in range(0, n - i - 1):
+#             if arr[j] > arr[j + 1]:
+#                 arr[j], arr[j + 1] = arr[j + 1], arr[j]
+# my_list = [64, 34, 25, 12, 22, 11, 90]
+
+# print("Original list:", my_list)
+
+# bubble_sort(my_list)
+
+# print("Sorted list:", my_list)
+
+
+#qs6
+
+def binary_search(arr, target):
+    low, high = 0, len(arr) - 1
+
+    while low <= high:
+        mid = (low + high) // 2
+        mid_val = arr[mid]
+        if mid_val == target:
+            return mid
+        elif mid_val < target:
+            low = mid + 1
+        else:
+            high = mid - 1
+    return -1
+sorted_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+target_value = 7
+
+result = binary_search(sorted_list, target_value)
+
+if result != -1:
+    print(f"Element {target_value} is present at index {result}")
+else:
+    print(f"Element {target_value} is not present in the list")
+
 
 #qs7
     
@@ -129,18 +173,87 @@
 
 #QS13
 
-def insertion_sort(arr):
-    for i in range(1, len(arr)):
-        key = arr[i]
-        j = i - 1
-        while j >= 0 and key < arr[j]:
-            arr[j + 1] = arr[j]
-            j -= 1
-        arr[j + 1] = key
+# def insertion_sort(arr):
+#     for i in range(1, len(arr)):
+#         key = arr[i]
+#         j = i - 1
+#         while j >= 0 and key < arr[j]:
+#             arr[j + 1] = arr[j]
+#             j -= 1
+#         arr[j + 1] = key
 
-input_list = [12, 11, 13, 5, 6]
-print("Original Array:", input_list)
+# input_list = [12, 11, 13, 5, 6]
+# print("Original Array:", input_list)
 
-insertion_sort(input_list)
+# insertion_sort(input_list)
 
-print("Sorted Array:", input_list)
+# print("Sorted Array:", input_list)
+
+
+
+
+#QS14
+# def linear_search(arr, target):
+#     for i in range(len(arr)):
+#         if arr[i] == target:
+#             return i
+#     return -1
+
+# numbers = [2, 8, 5, 3, 9, 1, 7]
+# target_number = 5
+
+# result = linear_search(numbers, target_number)
+
+# if result != -1:
+#     print(f"Element {target_number} found at index {result}.")
+# else:
+#     print(f"Element {target_number} not found in the list.")
+
+
+
+#QS15
+    
+# def selection_sort(arr):
+#     n = len(arr)
+
+#     for i in range(n - 1):
+#         min_index = i
+#         for j in range(i + 1, n):
+#             if arr[j] < arr[min_index]:
+#                 min_index = j
+
+#         arr[i], arr[min_index] = arr[min_index], arr[i]
+# input_list = [64, 25, 12, 22, 11]
+# print("Original Array:", input_list)
+
+# selection_sort(input_list)
+
+# print("Sorted Array:", input_list)
+
+
+
+#QS16
+
+# def second_smallest(nums):
+#     if len(nums) < 2:
+#         return "List should have at least two elements."
+
+#     smallest = float('inf')
+#     second_smallest = float('inf')
+
+#     for num in nums:
+#         if num < smallest:
+#             second_smallest = smallest
+#             smallest = num
+#         elif num < second_smallest and num != smallest:
+#             second_smallest = num
+
+#     return second_smallest
+
+# numbers = [5, 8, 3, 1, 7, 9, 2, 6]
+# result = second_smallest(numbers)
+
+# print("Original List:", numbers)
+# print("Second Smallest Number:", result)
+    
+

@@ -338,4 +338,28 @@ filtered_marks = filter_marks(marks)
 print("Original Dictionary:", marks)
 print("Filtered Dictionary with Marks > 50:", filtered_marks)
 
+#QS23
 
+def count_letters_digits(sentence):
+    result_dict = {'letters': 0, 'digits': 0}
+
+    for char in sentence:
+        if char.isalpha():
+            result_dict['letters'] += 1
+        elif char.isdigit():
+            result_dict['digits'] += 1
+
+    return result_dict
+input_sentence = "Hello 123 World!"
+
+result = count_letters_digits(input_sentence)
+print(result)
+
+#QS24
+
+def generate_square_dict(n):
+    square_dict = {i: i**2 for i in range(1, n+1)}
+    return square_dict
+n_value = 5
+result_dict = generate_square_dict(n_value)
+print(result_dict)

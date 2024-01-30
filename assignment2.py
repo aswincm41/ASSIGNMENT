@@ -242,18 +242,18 @@
 
 #QS19
 
-def count_vowels(input_string):
-    vowels = "aeiouAEIOU"
-    vowel_count = {vowel: 0 for vowel in vowels}
-    for char in input_string:
-        if char in vowels:
-            vowel_count[char] += 1
+# def count_vowels(input_string):
+#     vowels = "aeiouAEIOU"
+#     vowel_count = {vowel: 0 for vowel in vowels}
+#     for char in input_string:
+#         if char in vowels:
+#             vowel_count[char] += 1
 
-    return vowel_count
-user_input = input("Enter a string: ")
-result = count_vowels(user_input)
-for vowel, count in result.items():
-    print(f"Number of {vowel}'s: {count}")
+#     return vowel_count
+# user_input = input("Enter a string: ")
+# result = count_vowels(user_input)
+# for vowel, count in result.items():
+#     print(f"Number of {vowel}'s: {count}")
 
 #qs20
 # class ComplexNumber:
@@ -293,3 +293,75 @@ for vowel, count in result.items():
 
 # result_division = num1.divide(num2)
 # print(f"Division: {num1} / {num2} = {result_division}")
+    
+#21
+# num_1 = 10
+# num_2 = 11
+# result_modulo = num_1 % num_2
+# result_difference = num_1 - num_2
+# result_product = num_1 * num_2
+# print("Result of num_1 % num_2:", result_modulo)
+# print("Result of num_1 - num_2:", result_difference)
+# print("Result of num_1 * num_2:", result_product)
+
+
+#22
+
+# num_1 = 7
+# num_2 = 6
+
+# result_less_than = num_1 < num_2
+# result_greater_than = num_1 > num_2
+# result_less_than_equal = num_1 <= num_2
+# result_greater_than_equal = num_1 >= num_2
+# result_equal = num_1 == num_2
+# print("Result of num_1 < num_2:", result_less_than)
+# print("Result of num_1 > num_2:", result_greater_than)
+# print("Result of num_1 <= num_2:", result_less_than_equal)
+# print("Result of num_1 >= num_2:", result_greater_than_equal)
+# print("Result of num_1 == num_2:", result_equal)
+
+#23
+
+# num_1 = 3
+# num_2 = 4
+# result_condition_1 = (num_1 < num_2) and (num_1 != num_2)
+# result_condition_2 = (num_2 >= num_1) or (num_1 > num_2)
+# result_condition_3 = not (num_1 == num_2)
+# print("(num_1 < num_2) and (num_1 != num_2):", result_condition_1)
+# print("(num_2 >= num_1) or (num_1 > num_2):", result_condition_2)
+# print("not (num_1 == num_2):", result_condition_3)
+
+
+# 24
+# while (i<6):
+#     i = i +1
+# print(i)
+
+# (b. 23456)
+
+#25
+
+# customer_num = 5
+# invoice_num = 1212
+
+# print("Invoice No(s):")
+# while customer_num > 0:
+#     print("INV -", invoice_num)
+#     invoice_num = invoice_num + 3
+#     customer_num = customer_num - 1
+
+# (a. INV-1212 INV-1215 INV-1218)
+
+#26
+
+# def modify_string(input_str):
+#     if input_str.endswith('python'):
+#         return input_str + 'java'
+#     elif len(input_str) < 5:
+#         return input_str + 'php'
+#     else:
+#         return input_str + 'python'
+# original_str = "example"
+# modified_str = modify_string(original_str)
+# print(modified_str)
