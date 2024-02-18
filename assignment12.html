@@ -1,0 +1,210 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>jQuery Mouse Events</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<style>
+  .box {
+    width: 200px;
+    height: 200px;
+    background-color: #ccc;
+    margin: 20px;
+    text-align: center;
+    line-height: 200px;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+
+<div class="box" id="box1">Hover Over Me</div>
+<div class="box" id="box2">Click Me</div>
+<div class="box" id="box3">Double Click Me</div>
+<div class="box" id="box4">Mouse Enter</div>
+<div class="box" id="box5">Mouse Leave</div>
+<div class="box" id="box6">Drag Me</div>
+<div class="box" id="box7">Mouse Wheel</div>
+<div class="box" id="box8">Mouse Down/Up</div>
+<div class="box" id="box9">Move Me</div>
+
+<script>
+$(document).ready(function(){
+  // Hover
+  $("#box1").hover(function(){
+    $(this).css("background-color", "lightblue");
+  }, function(){
+    $(this).css("background-color", "#ccc");
+  });
+
+  // Click
+  $("#box2").click(function(){
+    $(this).text("Clicked!");
+  });
+
+  // Double Click
+  $("#box3").dblclick(function(){
+    $(this).text("Double Clicked!");
+  });
+
+  // Mouse Enter
+  $("#box4").mouseenter(function(){
+    $(this).css("opacity", "0.5");
+  });
+
+  // Mouse Leave
+  $("#box5").mouseleave(function(){
+    $(this).css("opacity", "1");
+  });
+
+  // Drag
+  $("#box6").draggable();
+
+  // Mouse Wheel
+  $("#box7").on("wheel", function(event){
+    if (event.originalEvent.deltaY < 0) {
+      $(this).text("Mouse Wheel: Up");
+    } else {
+      $(this).text("Mouse Wheel: Down");
+    }
+  });
+
+  // Mouse Down/Up
+  $("#box8").mousedown(function(){
+    $(this).text("Mouse Down");
+  });
+  $("#box8").mouseup(function(){
+    $(this).text("Mouse Up");
+  });
+
+  // Mouse Move
+  $("#box9").mousemove(function(event){
+    $(this).text("X: " + event.clientX + ", Y: " + event.clientY);
+  });
+});
+</script>
+
+</body>
+</html> -->
+
+
+
+
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>jQuery Keyboard Events</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<style>
+  #textBox {
+    width: 300px;
+    height: 100px;
+    margin-bottom: 10px;
+  }
+  .keyInfo {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+</style>
+</head>
+<body>
+
+<textarea id="textBox" placeholder="Type something..."></textarea>
+<div class="keyInfo" id="keyPressInfo"></div>
+<div class="keyInfo" id="keyDownInfo"></div>
+<div class="keyInfo" id="keyUpInfo"></div>
+
+<script>
+$(document).ready(function(){
+  // Key Press
+  $("#textBox").keypress(function(event){
+    $("#keyPressInfo").text("Key Pressed: " + String.fromCharCode(event.which));
+  });
+
+  // Key Down
+  $("#textBox").keydown(function(event){
+    $("#keyDownInfo").text("Key Down: " + event.key);
+  });
+
+  // Key Up
+  $("#textBox").keyup(function(event){
+    $("#keyUpInfo").text("Key Up: " + event.key);
+  });
+});
+</script>
+
+</body>
+</html> -->
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>jQuery Form Events</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<style>
+  input[type="text"], textarea {
+    display: block;
+    margin-bottom: 10px;
+  }
+  .message {
+    font-style: italic;
+    color: #666;
+  }
+</style>
+</head>
+<body>
+
+<form id="myForm">
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name">
+  
+  <label for="email">Email:</label>
+  <input type="text" id="email" name="email">
+  
+  <label for="message">Message:</label>
+  <textarea id="message" name="message"></textarea>
+  
+  <input type="submit" value="Submit">
+</form>
+
+<div class="message" id="submitMessage"></div>
+
+<script>
+$(document).ready(function(){
+  // Focus Event
+  $("#name").focus(function(){
+    $(this).css("background-color", "#f0f0f0");
+  });
+  
+  // Blur Event
+  $("#name").blur(function(){
+    $(this).css("background-color", "#fff");
+  });
+  
+  // Submit Event
+  $("#myForm").submit(function(event){
+    event.preventDefault(); // Prevent default form submission
+    
+    // You can perform form validation here
+    
+    // Simulate form submission
+    $("#submitMessage").text("Form submitted successfully!");
+  });
+});
+</script>
+
+</body>
+</html>
+
+ -->
